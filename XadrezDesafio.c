@@ -30,7 +30,7 @@ while (movimentocavalo <= 1) {
     for (int j = 0; j < 1; j++) {
         printf("e 1 casa para direita\n");
     }
-    break;
+    break; // resolve o problema de loop infinito
 }
 
 /*
