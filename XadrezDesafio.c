@@ -22,6 +22,17 @@ for (int i = 0; i < 5; i++)
 {
     printf("BISPO move %d casas para (cima,direita)\n", i + 1);
 }
+
+// MOVIMENTAÇÃO DO CAVALO
+int movimentocavalo = 1;
+while (movimentocavalo <= 1) {
+    printf("CAVALO move 2 casas para cima\n");
+    for (int j = 0; j < 1; j++) {
+        printf("e 1 casa para direita\n");
+    }
+    break;
+}
+
 /*
 
 GUIA DE CASAS A MOVER - NIVEL NOVATO
