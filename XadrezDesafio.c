@@ -37,7 +37,9 @@ void movimentoCavalo(int casas) {
 
 int main () {
     int casas;
+    char diagonal[20]; // variavel referente ao movimento do bispo
 
+//Inicia com um menu de peças para o jogador escolher
     printf("BEM VINDO AO JOGO DE XADREZ\n");
     printf("Neste jogo possuímos as seguinte peças:\n");
     printf("1 - Torre\n");
@@ -59,11 +61,10 @@ int main () {
             scanf("%d", &casas);
             movimentoRainha(casas);
             break;
-        case 3:
+        case 3: // Como o bispo tem 4 diagonais, o jogador deve escolher uma delas
             printf("Quantas casas deseja mover o Bispo? ");
             scanf("%d", &casas);
             printf("E para qual diagonal? (cimaDireita/cimaEsquerda/baixoDireita/baixoEsquerda): ");
-            char diagonal[20];
             scanf("%s", diagonal);
             movimentoBispo(casas, diagonal);
             break;
@@ -76,10 +77,11 @@ int main () {
         default:
             printf("Opção inválida! Tente novamente.\n");
     }
+    // Adicionei estas opções para que o jogador escolha se quer continuar ou nao.
     printf("Deseja continuar jogando? (1 - Sim, 0 - Não): ");
     int continuar;
     scanf("%d", &continuar);
-    if (continuar == 1) {
+    if (continuar == 1) { //usei condicionais para facilitar o código
         main(); // Chama a função main novamente para reiniciar o jogo
     } else {
         printf("Obrigado por jogar!\n");
